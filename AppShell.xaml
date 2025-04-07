@@ -5,14 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyFxApp.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="MyFxApp"
-    Shell.BackgroundColor="#121212"
-    Shell.ForegroundColor="White"
-    Shell.TitleColor="White">
+    Title="MyFxApp">
 
     <ShellContent
+        Title="Login"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
 
 </Shell>
-

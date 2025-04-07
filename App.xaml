@@ -17,38 +17,26 @@
 
             <Style TargetType="Button">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#18181B" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="Entry">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#121212" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="Editor">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#121212" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="Picker">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#121212" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="DatePicker">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#121212" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="TimePicker">
                 <Setter Property="FontFamily" Value="Poppins" />
-                <Setter Property="BackgroundColor" Value="#121212" />
-                <Setter Property="TextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
