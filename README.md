@@ -4,7 +4,8 @@ MyFxApp is a multiplatform .NET MAUI application developed as a final project fo
 
 [MYFXAPP DOWNLOAD LINK](https://github.com/Jrod7938/MyFxApp/releases)
 
-![MyFxApp Screenshot]()
+![MyFxApp Screenshot](https://github.com/user-attachments/assets/a7ea42a1-eb73-4253-8221-7a640af5ce1f)
+
 
 ---
 
@@ -47,8 +48,8 @@ MyFxApp is designed to help forex traders monitor their account performance on t
 
 ## Video Demo
 
-Watch the demonstration video showcasing MyFxApp’s key features and UI in action:  
-[MyFxApp Demo Video]()
+Watch the demonstration video showcasing the development of MyFxApp and showcasing it's key features and UI in action:  
+[MyFxApp Development Video](https://www.youtube.com/watch?v=HsHktsUuUec)
 
 ---
 
