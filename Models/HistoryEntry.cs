@@ -1,5 +1,8 @@
 ﻿namespace MyFxApp.Models {
     public class HistoryEntry {
+        /// <summary>
+        /// Represents a history entry for a trade.
+        /// </summary>
         public string openTime { get; set; }
         public string closeTime { get; set; }
         public string symbol { get; set; }

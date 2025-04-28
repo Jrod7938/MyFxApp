@@ -55,6 +55,8 @@
                                                  Spacing="10">
                                         <Label Text="{Binding action, StringFormat='Action: {0}'}"
                                                TextColor="White" />
+                                        <Label Text="{Binding openPrice, StringFormat='Open Price: {0:F5}'}"
+                                               TextColor="White" />
                                         <Label Text="{Binding profit, StringFormat='Profit: {0:F2}'}"
                                                TextColor="LightGreen" />
                                     </StackLayout>
@@ -113,9 +115,16 @@
                                            Text="{Binding symbol}"
                                            FontAttributes="Bold"
                                            TextColor="White" />
-                                    <Label Grid.Column="1"
-                                           Text="{Binding profit, StringFormat='Profit: {0:F2}'}"
-                                           TextColor="White" />
+                                    <StackLayout Grid.Column="1"
+                                                 Orientation="Horizontal"
+                                                 Spacing="10">
+                                        <Label Text="{Binding openPrice, StringFormat='Open Price: {0:F5}'}"
+                                               TextColor="White" />
+                                        <Label Text="{Binding closePrice, StringFormat='Close Price: {0:F5}'}"
+                                               TextColor="White" />
+                                        <Label Text="{Binding profit, StringFormat='Profit: {0:F2}'}"
+                                               TextColor="White" />
+                                    </StackLayout>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>

@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MyFxApp.Models {
+    /// <summary>
+    /// Represents an account entity for SQLite database.
+    /// </summary>
     public class AccountEntity {
         [PrimaryKey]
         public int Id { get; set; }

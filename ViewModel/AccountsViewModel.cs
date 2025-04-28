@@ -6,7 +6,9 @@ using MyFxApp.Views;
 using System.Collections.ObjectModel;
 
 namespace MyFxApp.ViewModel {
-
+    /// <summary>
+    /// ViewModel for the Accounts page.
+    /// </summary>
     [QueryProperty(nameof(Session), "session")]
     public partial class AccountsViewModel : ObservableObject {
         private readonly IMyFxBookApiService _api;
@@ -23,11 +25,20 @@ namespace MyFxApp.ViewModel {
         [ObservableProperty]
         private Account selectedAccount;
 
+        /// <summary>
+        /// Constructor for AccountsViewModel.
+        /// </summary>
+        /// <param name="api"></param>
+        /// <param name="localStorage"></param>
         public AccountsViewModel(IMyFxBookApiService api, ILocalStorageService localStorage) {
             _api = api;
             _localStorage = localStorage;
         }
 
+        /// <summary>
+        /// Loads the accounts from the API or local storage.
+        /// </summary>
+        /// <returns></returns>
         [RelayCommand]
         public async Task LoadAccountsAsync() {
             if (string.IsNullOrEmpty(Session))
@@ -49,6 +60,10 @@ namespace MyFxApp.ViewModel {
             }
         }
 
+        /// <summary>
+        /// Refreshes the accounts list with the provided list of accounts.
+        /// </summary>
+        /// <param name="list"></param>
         private void RefreshAccountsList(List<Account> list) {
             Accounts.Clear();
             foreach (var account in list) {
@@ -58,13 +73,20 @@ namespace MyFxApp.ViewModel {
             }
         }
 
-        // Property changed handler for SelectedAccount
+        /// <summary>
+        /// Handles the change in selected account.
+        /// </summary>
+        /// <param name="value"></param>
         partial void OnSelectedAccountChanged(Account value) {
             if (value != null) {
                 _ = NavigateToDetailAsync(value);
             }
         }
 
+        /// <summary>
+        /// Navigates to the AccountDetail page with the selected account's details.
+        /// </summary>
+        /// <param name="account"></param>
         private async Task NavigateToDetailAsync(Account account) {
             // Build the URI with exact query keys (case-sensitive)
             string uri = $"{nameof(AccountDetailPage)}?Session={Session}&AccountId={account.id}";
@@ -88,7 +110,9 @@ namespace MyFxApp.ViewModel {
             }
         }
 
-
+        /// <summary>
+        /// Logs out the user and navigates back to the Login page.
+        /// </summary>
         [RelayCommand]
         public async Task Logout() {
             if (!string.IsNullOrEmpty(Session))

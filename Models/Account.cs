@@ -1,4 +1,7 @@
 ﻿namespace MyFxApp.Models {
+    /// <summary>
+    /// Represents an account on MyFxBook.
+    /// </summary>
     public class Account {
         public int id { get; set; }
         public string name { get; set; }

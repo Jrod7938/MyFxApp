@@ -8,6 +8,9 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 
 namespace MyFxApp.ViewModel {
+    /// <summary>
+    /// ViewModel for the AccountDetail page.
+    /// </summary>
     public partial class AccountDetailViewModel : ObservableObject, IQueryAttributable {
         private readonly IMyFxBookApiService _api;
 
@@ -31,6 +34,10 @@ namespace MyFxApp.ViewModel {
             _api = api;
         }
 
+        /// <summary>
+        /// Applies query attributes to the ViewModel.
+        /// </summary>
+        /// <param name="query"></param>
         public void ApplyQueryAttributes(IDictionary<string, object> query) {
             if (query.TryGetValue("Session", out object sessionObj)) {
                 Session = sessionObj?.ToString();
@@ -43,6 +50,9 @@ namespace MyFxApp.ViewModel {
             _ = LoadAccountDetails();
         }
 
+        /// <summary>
+        /// Loads account details including open trades, open orders, and history.
+        /// </summary>
         [RelayCommand]
         public async Task LoadAccountDetails() {
             if (string.IsNullOrEmpty(Session) || AccountId <= 0)
@@ -98,6 +108,9 @@ namespace MyFxApp.ViewModel {
             }
         }
 
+        /// <summary>
+        /// Navigates back to the previous page.
+        /// </summary>
         [RelayCommand]
         public async Task GoBack() {
             await Shell.Current.GoToAsync("..");
