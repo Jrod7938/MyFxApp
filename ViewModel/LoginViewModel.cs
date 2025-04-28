@@ -5,6 +5,9 @@ using MyFxApp.Views;
 using System.Diagnostics;
 
 namespace MyFxApp.ViewModel {
+    /// <summary>
+    /// ViewModel for the Login page.
+    /// </summary>
     public partial class LoginViewModel : ObservableObject {
 
         private readonly IMyFxBookApiService _apiService;
@@ -23,6 +26,10 @@ namespace MyFxApp.ViewModel {
         [ObservableProperty]
         string errorMessage;
 
+        /// <summary>
+        /// Asynchronously logs in the user using the provided email and password.
+        /// </summary>
+        /// <returns></returns>
         [RelayCommand]
         async Task LoginAsync() {
             try {

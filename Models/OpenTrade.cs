@@ -1,5 +1,8 @@
 ﻿namespace MyFxApp.Models {
     public class OpenTrade {
+        /// <summary>
+        /// Represents an open trade in the trading account.
+        /// </summary>
         public string openTime { get; set; }
         public string symbol { get; set; }
         public string action { get; set; }

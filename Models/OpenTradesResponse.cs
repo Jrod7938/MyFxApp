@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyFxApp.Models {
+﻿namespace MyFxApp.Models {
     public class OpenTradesResponse {
+        /// <summary>
+        /// Represents the response from the MyFxBook API for open trades.
+        /// </summary>
         public bool error { get; set; }
         public string message { get; set; }
         public List<OpenTrade> openTrades { get; set; }

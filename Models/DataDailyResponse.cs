@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyFxApp.Models {
+﻿namespace MyFxApp.Models {
+    /// <summary>
+    /// Represents the response from the MyFxBook API for daily data.
+    /// </summary>
     public class DataDailyResponse {
         public bool error { get; set; }
         public string message { get; set; }
